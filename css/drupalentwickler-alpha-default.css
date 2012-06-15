@@ -1,0 +1,215 @@
+/* This file will hold styles that are loaded using the same media query as the narrow grid. */
+
+h1 { font-size: 1.9em; }
+
+/* Header Background */
+#section-header {
+  background: #444 url("../img/header.jpg") no-repeat center 40%;
+  background-size:100%;
+}
+
+#zone-branding-wrapper {
+  padding-top: 7%;
+}
+
+.site-slogan {
+  display:block; /* is hidden in global.css */
+}
+
+
+
+/* Logo & Site-Name Effekt */
+.site-name a,
+.site-slogan {
+  color:#fff;
+  text-shadow: 0 0 3px #000;
+  -moz-text-shadow: 0 0 3px #000;
+  -webkit-text-shadow: 0 0 3px #000; 
+  font-weight: bold;
+  opacity:0.7;
+  filter:alpha(opacity=70);
+  
+}
+
+.logo-img,
+.site-name a,
+.site-slogan {
+  -webkit-transition: opacity 2s linear 0.3s;
+  -moz-transition: opacity 2s linear 0.3s;
+  -o-transition: opacity 2s linear 0.3s;
+	transition: opacity 2s linear 0.3s;
+}
+
+
+.site-name a:hover,
+.site-slogan:hover {
+  opacity:0.99;
+  filter:alpha(opacity=99);
+  
+  -webkit-transition: opacity 0.5s ease 0s;
+  -moz-transition: opacity 0.5s ease 0s;
+  -o-transition: opacity 0.5s ease 0s;
+	transition: opacity 0.5s ease 0s;
+}
+.logo-img:hover {
+  opacity:0.4;
+  filter:alpha(opacity=40);
+  
+  -webkit-transition: opacity 1s ease 0.2s;
+  -moz-transition: opacity 1s ease 0.2s;
+  -o-transition: opacity 1s ease 0.2s;
+	transition: opacity 1s ease 0.2s;
+}
+
+
+
+/* Logo */
+.logo-img {
+  display:block;
+  
+  position:absolute;
+  bottom:-42%;
+  left: -8%;
+  
+  opacity:0.1;
+  filter:alpha(opacity=10);
+  width:100%;
+}
+
+.logo-img img {
+  width:80%;
+  height:auto;
+}
+
+#zone-branding .site-name {
+  font-size:260% !important;
+  min-height:1.1em
+}
+
+
+.site-slogan {
+  max-width:60%;
+}
+
+
+
+
+
+
+.bright{
+  opacity:0.0;
+  -moz-opacity:.0; 
+  filter:alpha(opacity=0);
+}
+
+/* Lupe (Colorbox) im Portfolio zeigen */
+.galleryformatter .view-full {
+    display:block;
+}
+
+.node-type-portfolio .field-name-field-portfolio-tasks,
+.node-type-portfolio .field-name-field-portfolio-auftraggeber,
+.node-type-portfolio .field-name-field-link,
+.node-type-portfolio .field-name-field-portfolio-modules,
+.node-type-portfolio .field-name-field-portfolio-drupalversion {
+  width: 40%;
+}
+
+
+
+/* Hauptmenu Region */
+#region-menu {
+  margin:0 10px;
+  background:none;
+}
+
+
+/* Nice Menu */
+ul.nice-menu a:link, 
+ul.nice-menu a:visited {
+  color:#6A97B0;
+}
+
+
+/* Slide Up Down Effect for Tabs */
+ul.nice-menu > li > a {
+  transition: all 0.2s ease 0.1s; 
+  /* -webkit-transition: all 0.2s ease 0.1s; */
+	-moz-transition: all 0.2s ease 0.1s;
+	-o-transition: all 0.2s ease 0.1s;
+	-ms-transition: all 0.2s ease 0.1s;
+}
+
+
+ul.nice-menu > li > a, 
+ul.nice-menu-down li.menuparent > a{
+  display:block;
+  padding:0.5em 1em;
+  margin:0.7em 0.4em 0 0;
+  border:1px solid #E6F0FF;
+  border-bottom:none;
+  border-radius:4px 4px 0 0;
+  
+      
+  /* fallback */ 
+  background: #F7FBFF; 
+  /* Firefox 3.6+ */  
+  background: -moz-linear-gradient(100% 100% 90deg, #FFF, #F7FBFF);  
+  /* Safari 4-5, Chrome 1-9 */ 
+  /* -webkit-gradient(<type>, <point> [, <radius>]?, <point> [, <radius>]? [, <stop>]*) */ 
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#F7FBFF), to(#fff)); 
+  /* Safari 5.1+, Chrome 10+ */ 
+  background: -webkit-linear-gradient(#F7FBFF, #fff); 
+  /* Opera 11.10+ */ 
+  background: -o-linear-gradient(#F7FBFF, #fff); 
+  
+  /*
+  box-shadow: 3px -1px 5px #f5f5f5;
+  -moz-box-shadow: 3px -1px 5px #f5f5f5;
+  -webkit-box-shadow: 3px -1px 5px #f5f5f5;
+  */
+  
+}
+  
+ul.nice-menu-down > li:hover > a,
+ul.nice-menu-down > li.menuparent:hover > a,
+ul.nice-menu-down > li > a.active,
+ul.nice-menu-down > li.menuparent > a.active,
+ul.nice-menu-down > li.active-trail > a  {
+  text-decoration:none;
+  
+  background:#E6F0FF;
+  background: -moz-linear-gradient(100% 100% 90deg, #F7FBFF, #E6F0FF);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#E6F0FF), to(#F7FBFF)); 
+  background: -webkit-linear-gradient(#E6F0FF, #F7FBFF); 
+  background: -o-linear-gradient(#E6F0FF, #F7FBFF);
+  
+ 
+  padding-bottom: 1.1em;
+  margin-top:2px;
+  margin-bottom:-2px;
+ 
+ 
+}
+
+ul.nice-menu li ul li {
+  display:block;
+}
+
+
+
+/* Sidebars */
+/* Sidebar Menu */
+.region-sidebar-second-inner {
+  border-left: 1px solid #f5f5f5;
+  padding-left:20px;
+}
+
+
+
+#zone-footer-wrapper {
+  padding:50px 0% 11% 0;
+  background: #333 url("../img/footer_1.jpg") repeat center 55%;
+  background-size:100%;
+}
+

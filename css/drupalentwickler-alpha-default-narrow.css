@@ -1,0 +1,11 @@
+/* This file will hold styles that are loaded using the same media query as the narrow grid. */
+
+/* Drupal Icon */
+#block-block-9 {
+  display:none;
+}
+
+
+.galleryformatter .gallery-slides {
+  min-height:320px;
+}
