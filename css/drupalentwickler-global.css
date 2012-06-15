@@ -75,6 +75,7 @@ p {
 
 #section-header {
   background:#444;
+  border-bottom: 5px solid orange;
 }
 
 
@@ -539,36 +540,7 @@ ul.nice-menu-down > li.active-trail > a  {
 }
 
 
-ul.nice-menu li ul {
-  margin:1.5em 0 0 0;
-  border:1px solid #E6F0FF;
-  border-top:none;
-  -moz-box-shadow: 3px 3px 3px #aaa;
-  -webkit-box-shadow: 3px 3px 3px #aaa;
-  -ms-box-shadow: 3px 3px 3px #aaa;
-  -o-box-shadow: 3px 3px 3px #aaa;
-  box-shadow: 3px 3px 3px #aaa;
-  
-}
 
-ul.nice-menu li ul li {
-  border:none;
-  min-width:20em;
-  font-size:0.8em;
-  
-  display: none; /* HACK !!! hide dropdowns for mobile */
-}
-
-ul.nice-menu li ul li a {
-  background:#F7FBFF !important;
-  padding:0.5em 0 0.5em 1em;
-}
-
-ul.nice-menu li ul li a:hover,
-ul.nice-menu li ul li a.active {
-  background:#E6F0FF !important;
-  color: #000;
-}
 
 /* Hack: Hide Portfolio Submenu in Nice Menus */
 .menu-path-portfolio ul {display: none !important;}
@@ -818,7 +790,6 @@ a.bt{
 #zone-footer-wrapper {
   font-size: 85%;
   color:#bbb;
-  border-top:1px solid #eee;
   padding-top:3em;
   background:#363636;
   border-top: 5px solid orange;
