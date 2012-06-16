@@ -144,8 +144,8 @@ ul.nice-menu > li > a {
 ul.nice-menu > li > a, 
 ul.nice-menu-down li.menuparent > a{
   display:block;
-  padding:0.5em 1em;
-  margin:0.7em 0.4em 0 0;
+  padding:7px 1em;
+  margin:10px 10px 0 0;
   border:5px solid orange;
   border-bottom:none;
   border-radius:4px 4px 0 0;
@@ -187,7 +187,7 @@ ul.nice-menu-down > li.active-trail > a  {
   background: -o-linear-gradient(#E6F0FF, #F7FBFF);
   */
  
-  padding-bottom: 16px;
+  padding-bottom: 15px;
   margin-top:2px;
   margin-bottom:-2px;
 
@@ -195,7 +195,7 @@ ul.nice-menu-down > li.active-trail > a  {
 }
 
 ul.nice-menu li ul {
-  margin:27px 0 0 4px;
+  margin:25px 0 0 4px;
   border:1px solid orange;
   border-top:none;
 }
@@ -203,18 +203,23 @@ ul.nice-menu li ul {
 ul.nice-menu li ul li {
   border:none;
   display:block;
-  min-width:30em;
+  min-width:20em;
 }
 
 ul.nice-menu li ul li a {
-  padding:0.25em 0 1em 1em;
+  padding:0.75em 0 0.75em 1em;
   background: #fff;
 }
 
-ul.nice-menu li ul li a:hover,
-ul.nice-menu li ul li a.active {
-  color: #000;
+ul.nice-menu li ul li a:hover {
+  color: #fff;
+  background:orange;
 }
+ul.nice-menu li ul li a.active {
+  text-decoration: underline;
+  color:#000;
+}
+
 
 
 /* Sidebars */
