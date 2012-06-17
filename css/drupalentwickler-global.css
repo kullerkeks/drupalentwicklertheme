@@ -1,0 +1,894 @@
+/* Drupalentwickler stylesheet */
+
+/* Mobile Devices */
+@media all and (max-width: 739px) {
+  .mobile-hidden {
+    display: none; /* helper class used to explicit hide elements on mobile devices */
+  }
+}
+
+
+/* @font-face = Load & Embed Font */
+@font-face { /* EOT file for IE */ 
+	font-family: "Orbitron"; 
+  src: url('../fonts/Orbitron-Medium.eot');
+}
+
+@font-face { /* TTF for all normal Browsers */
+	font-family: "Orbitron"; 
+  src: url('../fonts/Orbitron-Medium.ttf');
+  format("truetype");
+}
+
+/* Important Titles use Font Orbitron */
+.site-name /* , h1, .pane-title, .block-title, #page-title */ {
+  font-family: "Orbitron";
+  
+  /* text-shadow: 2px 2px 2px #ddd; */
+}
+
+
+/* General */
+body {
+  margin:0;
+  font-family: "Tresbuchet MS", sans-serif;
+  color:#555;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+  /* color:#E08E00; */
+  color:orange;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing:normal;
+  /* font-family: "Tresbuchet MS", sans-serif; */
+  font-family:Georgia, serif;
+  font-weight: lighter;
+  color:#298DCC;
+  margin: 0.3em 0 0.3em 0;
+}
+
+
+h1 { font-size: 1.3em; } /* size for mobile, bigger defined in default css*/ 
+h2 { font-size: 1.3em;}
+h3 { font-size: 1.2em;}
+h4 { font-size: 1.1em;}
+h2.block-title {
+   font-size: 1.3em;
+   margin: 0.3em 0 0.3em 0;
+}
+
+hr {
+  background-color: #F5F5F5;
+}
+
+p {
+  margin: 0.0em 0 1em 0;
+}
+
+
+#section-header {
+  background:#444;
+}
+
+
+.site-name {
+  margin-top:30px;
+  font-size:1.9em !important;
+}
+
+.site-name a {
+   color:#fff;
+   text-decoration: none;
+}
+
+
+.site-slogan {
+  display: none;
+  font-style: normal;
+  /* font-family: Orbitron, Arial, sans-serif; */
+  font-family: "Tresbuchet MS", sans-serif;
+  color:#fff;
+  font-size:0.9em;
+  line-height:1.3em;
+  margin-top:0.5em;
+  letter-spacing:1px;
+}
+
+/* Drupal Icon */
+#block-block-9 {
+  display:none;
+}
+
+/* Logo */
+.logo-img {
+  display:none;
+}
+
+
+/* Language Switcher */
+#block-locale-language {
+  position: absolute;
+  top:0; right:0;
+}
+#block-locale-language li {
+  display:inline;
+  list-style: none;
+  padding: 0 0 0 1em;
+}
+#block-locale-language a.active {
+  text-decoration:underline;
+}
+.locale-untranslated {
+  opacity:0.1;
+  filter:alpha(opacity=10);
+  text-decoration:none;
+}
+
+#zone-branding {
+  padding: 0.75% 0 0.75% 0;
+}
+
+#zone-user {
+  position:absolute;
+  right:0;
+  z-index:2;
+}
+
+/* Secondary Menu */
+#zone-user #region-user-second .menu {
+  text-align: right;
+}
+#zone-user #region-user-second .menu li {
+  list-style: none;
+  display:inline;
+  padding:3px 8px;
+  border:1px solid #ccc;
+  border-top: none;
+  border-radius:0 0 6px 6px;
+  
+  background:rgba(200, 200, 200, 0.3);
+  color:#fff;
+  font-size:0.9em;
+  
+   text-shadow: 0 0 3px #000;
+  -moz-text-shadow: 0 0 3px #000;
+  -webkit-text-shadow: 0 0 3px #000; 
+} 
+#zone-user #region-user-second .menu li a {
+  color:#fff;
+}
+#zone-user #region-user-second .menu li a.active {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+#zone-content-wrapper {
+  padding-bottom:5%;
+  padding-top:20px;
+  background:#fff;
+}
+
+  
+
+.breadcrumb {
+  padding:0.5em 0 0 0;
+  font-size:0.9em;
+  opacity:0.4;
+  -moz-opacity:.4; 
+  filter:alpha(opacity=40);
+}
+
+
+
+/* End IMG Floats */
+.clearfix:after,
+.views-row:after {
+    content: "."; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden;
+}
+
+
+/* Panels */
+#drupalscope {margin-top:1em;}
+
+
+/* Panel Regions untereinander anstatt nebeneinander auf Lowres */
+@media all and (max-width: 739px) {
+  .panels-flexible-region {
+    width:100%;
+  }
+  #region-content .view-drupal-markt .views-row {width:90%;}
+}
+
+
+/* Views allgemein */
+
+/* Bei ungreaden Views Rows immer float beenden und Zeilenumbruch erzwingen */
+.views-row:nth-child(odd) {
+  clear:left;
+}
+
+
+
+/* Rahmen für feed, tweet, portfolio, markt views-rows */
+.view-simons-feedview .views-row,
+.view-simons-tweetview .views-row,
+#region-content .view-portfolio .views-row,
+.view-drupal-markt .views-row {
+  padding: 1em;
+  margin:0 0 1.5em 0;
+  border:1px solid #f1f1f1;
+  /* border-bottom:1px dotted #ccc; */
+  border-radius:5px;
+  max-width: 500px;
+  overflow: hidden;
+}
+
+.shadow,
+.view-simons-feedview .views-row,
+.view-simons-tweetview .views-row,
+#region-content .view-portfolio .views-row,
+#region-content .view-drupal-markt .views-row {
+  box-shadow: 3px 3px 5px #ededed;
+  -moz-box-shadow: 3px 3px 5px #ededed;
+  -webkit-box-shadow: 3px 3px 5px #ededed;
+}
+
+
+.view-simons-feedview .views-row:hover,
+.view-simons-tweetview .views-row:hover {
+  background:#FEFFE6;
+  box-shadow: 3px 3px 5px #ddd;
+  -moz-box-shadow: 3px 3px 5px #ddd;
+  -webkit-box-shadow: 3px 3px 5px #ddd;
+}
+
+.bright{ /* also defined in default.css */
+  opacity:0.4;
+  -moz-opacity:.4; 
+  filter:alpha(opacity=40);
+}
+.views-row:hover .bright {
+  opacity:1;
+  -moz-opacity:1; 
+  filter:alpha(opacity=100);
+}
+
+/* Feed Views */
+
+.view-simons-feedview .views-field-title h1,
+.view-simons-feedview .views-field-title h2 {
+  line-height: normal;
+  font-size:1.1em;
+  font-weight:bold;
+  font-family: inherit;
+}
+
+.view-simons-feedview .views-field-field-feed-image {
+  float:left;
+  margin-right:10px;
+  margin-top:3px;  
+}
+
+.view-simons-feedview .views-field-field-feed-item-description {
+  /*display:inline;*/
+}
+
+.view-simons-feedview .views-field-tid {
+  font-size:.8em;
+}
+
+.view-simons-feedview  .views-field-created,
+.view-simons-feedview  .views-field-author {
+  color:#999;
+  font-size:.8em;
+}
+
+.view-simons-feedview  .views-field-author .field-content {
+
+}
+
+.view-simons-feedview .views-field-view-node {
+  font-size:.8em;
+  float:right;
+  margin-bottom: -1em;
+}
+.view-simons-feedview .views-field-edit-node {
+  font-size:.8em;
+  float:left;
+  margin-bottom: -1em;
+}
+
+
+/* Tweet Views */
+
+.view-simons-tweetview .views-field-field-twitterfeed-item-imgurl img {
+  width:48px;
+  height:48px;
+  float:left;
+  margin-right:10px;  
+}
+
+.view-simons-tweetview .views-field-field-feed-item-description p {
+  margin:0;
+}
+
+.view-simons-tweetview .views-field-field-twitterfeed-item-author {
+  font-style: italic;
+  font-size:0.8em;
+}
+
+.view-simons-tweetview .views-field-created {
+  color:#999;
+  font-size:0.8em;
+}
+
+.view-simons-tweetview .views-field-delete-node,
+.view-simons-tweetview .views-field-view-node,
+.view-simons-tweetview .views-field-view-node-1,
+.view-simons-tweetview .views-field-view-node-2,
+.view-simons-tweetview .views-field-edit-node,
+.view-simons-tweetview .views-field-publishcontent
+ {
+  font-size:0.8em;
+  float:right;
+  margin-bottom: -1em;
+}
+
+.view-simons-tweetview #edit-search {
+  min-width:30em;
+}
+
+/* Dienstleistungen View */
+
+
+.view-leistungen .views-field-title {
+  font-size:0.9em;
+}
+
+.view-leistungen .views-field-field-image {
+  float:left;
+  padding-right: 2em;
+  width: 15%;
+  min-height:170px;
+}
+.view-leistungen .views-field-field-image img {
+  width: 100%;
+  height:auto;
+}
+
+
+
+/* Portfolio View */
+#region-content .view-portfolio .views-row {
+  float:left;
+  width:90%;
+  margin-right:10px;
+  padding:10px 15px;
+}
+
+#region-content .view-portfolio .views-field-field-portfolio-drupalversion {
+  text-align: right;
+}
+
+#region-content .view-portfolio .views-row:hover,
+#region-content .view-drupal-markt .views-row:hover {
+  -moz-transform: rotate(0deg) scale(1.03);
+  -webkit-transform: rotate(0deg) scale(1.03);
+  -o-transform: rotate(0deg) scale(1.03);
+  -ms-transform: rotate(0deg) scale(1.03);
+  transform: rotate(0deg) scale(1.03);
+  
+}
+
+.view-portfolio.view-display-id-page .views-row:hover,
+.view-drupal-markt.view-display-id-page .views-row:hover {
+  -moz-box-shadow: 5px 8px 8px #ccc !important;
+  -webkit-box-shadow: 5px 8px 8px #ccc !important;
+  -ms-box-shadow: 5px 8px 8px #ccc !important; 
+  -o-box-shadow: 5px 8px 8px #ccc !important;
+  box-shadow: 5px 8px 8px #ccc !important;
+}
+
+
+.view-portfolio .views-row,
+.view-drupal-markt .views-row {
+	-moz-transition: all 0.2s ease 0s;
+  -o-transition: all 0.2s ease 0s;
+	transition: all 0.2s ease 0s;
+}
+
+
+/* Bleicheffekt für Portfolio und Mark */
+.view-portfolio.view-display-id-page .views-row:hover,
+.view-drupal-markt .views-row:hover {
+  opacity: 0.9;
+  filter: alpha(opacity=9);
+}
+
+
+
+#region-content .view-portfolio .views-row img{
+  width:100%; height:auto;
+}
+
+
+
+/* Portfolio-Logowall View */
+#region-content .view-portfolio.view-display-id-page_2 .views-row {
+  border:none;
+  box-shadow:none;
+  padding-bottom:20px;
+}
+#region-content .view-portfolio.view-display-id-page_2 .views-row img,
+#views_slideshow_cycle_main_portfolio-block_logowall_slideshow img {
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+}
+
+
+/* Sidebar Slideshows */
+#views_slideshow_cycle_main_portfolio-block_1,
+#views_slideshow_cycle_main_portfolio-block_logowall_slideshow
+
+{
+  max-width:100%;
+}
+#views_slideshow_cycle_main_portfolio-block_1 img
+{
+  width:100%; height:auto;
+}
+#views_slideshow_cycle_main_portfolio-block_logowall_slideshow img
+{
+  width:65%; height:auto;
+}
+
+
+/* View Drupal Markt */
+.view-drupal-markt .views-row {float:left; width:42%; margin-right:2%;}
+.view-drupal-markt .views-field-field-markt-url img {width:100%; height:auto;}
+.view-drupal-markt h3 {clear:both; padding-top:2em;}
+.view-drupal-markt .views-field-field-markt-kategorie {float:right; margin-top:0.4em;}
+.view-drupal-markt .views-widget-sort-order {display:none;}  /* HACK !!! Sortierreihefolg Dropdown verstecken */
+#region-content .views-exposed-widgets {margin-bottom:20px;}
+/* Markt Infinitiv Scroller */
+.view-drupal-markt #views_infinite_scroll-ajax-loader {position:absolute; bottom:-20px; left:43%;}
+
+
+/* Views-Exposed-Filter in Blocks */
+
+.block .views-widget-filter-keys {
+  width:62%;
+}
+.block .views-exposed-widget .form-text {
+  width:100%;
+}
+.block .views-exposed-widget .form-submit {
+  margin:0;
+}
+
+
+/* Hauptmenu Region */
+#region-menu {
+  margin:0 0 -1.5em 0;
+  background:#fff;
+}
+
+
+
+/* #################  Nice Menu ###################  */
+ul.nice-menu-down {
+  float: none;
+}
+
+.block-nice-menus {
+  margin:0;
+}
+
+ul.nice-menu a:link, 
+ul.nice-menu a:visited {
+  color:orange;
+  font-size:1.2em; 
+}
+
+
+ul.nice-menu > li {
+  background:none !important;
+  border:none !important;
+}
+
+ul.nice-menu > li > a, 
+ul.nice-menu-down li.menuparent > a{
+  padding:0.65em; /*overwritten in default */
+  background:#fff;
+  border-bottom:0;
+}
+
+
+ul.nice-menu-down > li:hover > a,
+ul.nice-menu-down > li.menuparent:hover > a,
+ul.nice-menu-down > li > a.active,
+ul.nice-menu-down > li.active-trail > a  {
+  color:#000;
+  text-decoration:underline;
+}
+
+ul.nice-menu li ul li {
+  display: none; /* hide dropdowns for mobile */
+}
+
+
+
+
+/* Hack: Hide Portfolio Submenu in Nice Menus */
+.menu-path-portfolio ul {display: none !important;}
+
+
+
+/* Page Node */
+.node table, .node tbody {
+  border: none;
+}
+
+.node .content ul {
+  list-style: inside;
+}
+
+.node .content ul li {
+  padding-left:0;
+  background:none;
+  list-style-image: url("../img/menu-leaf1.gif");
+}
+.node .content ul li:nth-of-type(even){
+  list-style-image: url("../img/menu-leaf2.gif");
+}
+
+.node tr:hover td {
+  background:none; 
+}
+
+
+/* Image Insert */
+img.insert,
+img.left {
+  float:left;
+  margin:5px 15px 5px 0;
+}
+
+img.right {
+  float:right;
+  margin:5px 0 15px 5px;
+}
+
+/* Tweet Item Node Panel */
+.node-type-twitterfeed-item h1 {
+  display:none;
+}
+
+.node-type-twitterfeed-item .panels-flexible-region-first .views-row {
+  font-size: 1.4em;
+}
+
+.node-type-twitterfeed-item .panels-flexible-region-first .views-row img {
+  width:70px;
+  height:70px;
+}
+
+/* Feed Item Node Panel */
+
+.node-type-feed-item h1 {
+  font-size:1.6em;
+}
+
+
+/* Node Portfolio */
+
+.galleryformatter .gallery-slides,
+.galleryformatter .gallery-thumbs {max-width:100%;}
+.galleryformatter .gallery-slides {min-height:280px;}
+.galleryformatter .gallery-slides {max-height: 220px !important;}
+.galleryformatter .gallery-frame, 
+.galleryformatter .gallery-frame li  {max-width:100%; height:auto;}
+.galleryformatter .gallery-slides img {max-width:100%; height:auto;}
+
+/* Lupe (Colorbox) im Portfolio verstecken */
+.galleryformatter .view-full {display:none;}
+
+.galleryformatter{ margin-bottom: 1.5em;}
+
+.node-type-portfolio .field-name-field-portfolio-tasks,
+.node-type-portfolio .field-name-field-portfolio-auftraggeber,
+.node-type-portfolio .field-name-field-link,
+.node-type-portfolio .field-name-field-portfolio-modules,
+.node-type-portfolio .field-name-field-portfolio-drupalversion {
+  clear:both;
+  float:right;
+  margin:0 0 .5em 1em;
+  padding:1em;
+  width: 95%;
+  background: #F7FBFF;
+  border:1px solid #E6F0FF;
+}
+
+
+
+.node-type-portfolio .field-name-field-portfolio-tasks {
+  background: #F6FFED;
+}
+
+.node-type-portfolio .field-name-field-link {
+  background: #FDFFED;
+}
+
+.node-type-portfolio .field-name-field-portfolio-modules {
+  background: #FFF7F0;
+}
+
+.node-type-portfolio .field-name-field-portfolio-drupalversion {
+  background: #FEF7FF;
+}
+
+
+.node-type-portfolio .field-name-field-portfolio-tasks .field-item,
+.node-type-portfolio .field-name-field-portfolio-auftraggeber .field-item,
+.node-type-portfolio .field-name-field-link .field-item,
+.node-type-portfolio .field-name-field-portfolio-modules .field-item,
+.node-type-portfolio .field-name-field-portfolio-drupalversion .field-item {
+  background: url("../img/menu-leaf1.gif") no-repeat 0 6px;
+  padding-left: 15px;
+}
+
+.node-type-portfolio .field-name-field-portfolio-tasks .field-item:nth-of-type(even),
+.node-type-portfolio .field-name-field-portfolio-auftraggeber .field-item:nth-of-type(even),
+.node-type-portfolio .field-name-field-link .field-item:nth-of-type(even),
+.node-type-portfolio .field-name-field-portfolio-modules .field-item:nth-of-type(even) {
+  background: url("../img/menu-leaf2.gif") no-repeat 0 6px;
+}
+
+
+/* Kontakt Block */
+#block-block-6 table {
+  border:none;
+}
+#block-block-6 table tbody {
+  border:none;
+}
+#block-block-6 tr td {
+  background:none;
+}
+
+
+/* Sidebars */
+/* Sidebar Menu */
+#region-sidebar-second .block-title {
+  text-transform:uppercase;
+}
+
+#region-sidebar-second .block,
+.block-service-links {
+  margin:1em 0 3em 0;
+}
+
+
+#region-sidebar-second .menu {
+  padding-left:0.5em;
+}
+
+
+#region-sidebar-second ul.menu li.leaf,
+#region-content ul li {
+  list-style-image: url("../img/menu-leaf1.gif");
+}
+
+#region-sidebar-second ul.menu li.leaf:nth-of-type(even),
+#region-content ul li:nth-of-type(even)
+{
+  list-style-image: url("../img/menu-leaf2.gif");
+}
+
+#region-sidebar-second ul.menu li.collapsed {
+    list-style-image: url("../img/menu-collapsed.gif");
+}
+#region-sidebar-second ul.menu li.expanded {
+    list-style-image: url("../img/menu-expanded.gif");
+}
+
+#region-sidebar-second ul.menu li a.active {
+  color:#000;
+  text-decoration:underline;
+}
+
+#region-sidebar-second li a {
+  padding-right: 20px;
+}
+
+#region-sidebar-second li:nth-of-type(odd) a.active, 
+#region-sidebar-second li ul li:nth-of-type(odd) a.active {
+    background: url("../img/active_menu_link.gif") no-repeat scroll right center transparent !important;
+}
+
+#region-sidebar-second li:nth-of-type(even) a.active,
+#region-sidebar-second li ul li:nth-of-type(even) a.active {
+    background: url("../img/active_menu_link2.gif") no-repeat scroll right center transparent !important;
+}
+
+/* Fallback for IE */
+#region-sidebar-second li a.active {
+  background: url("../img/active_menu_link.gif") no-repeat scroll right center transparent !important;
+}
+
+#region-sidebar-second ul ul {
+  margin-bottom:0.5em;
+  padding-top:0;
+}
+
+
+
+
+
+
+
+/* Button-like Links */
+.bt a, 
+a.bt{
+  border-color: #DDD #BBB #999;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-style: solid;
+  border-width: 1px;
+  cursor: pointer;
+  outline: 0 none;
+  padding: 0px 4px;
+  margin-left:0.5em;
+  width: auto;
+  text-decoration: none;
+    
+  /* fallback */ 
+  background: #e7e7e7; 
+  
+  /* Firefox 3.6+ */ 
+  background: -moz-linear-gradient(100% 100% 90deg, #ddd, #fff); 
+  
+  /* Safari 4-5, Chrome 1-9 */ 
+  /* -webkit-gradient(<type>, <point> [, <radius>]?, <point> [, <radius>]? [, <stop>]*) */ 
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#ddd)); 
+  
+  /* Safari 5.1+, Chrome 10+ */ 
+  background: -webkit-linear-gradient(#fff, #ddd); 
+  
+  /* Opera 11.10+ */ 
+  background: -o-linear-gradient(#fff, #ddd); 
+    
+}
+
+
+
+/* Footer */
+#zone-footer-wrapper {
+  font-size: 85%;
+  color:#bbb;
+  padding-top:3em;
+  background:#363636;
+  border-top: 5px solid orange;
+}
+
+.block-menu-footer-menu li {
+  font-size:120%;
+  list-style: none !important;
+  display:inline;
+}
+
+
+/* GallerFormatter (Portfolio) */
+.galleryformatter-greenarrows .gallery-thumbs .wrapper { border:none;}
+.galleryformatter-greenarrows .gallery-thumbs {padding:0;}
+.galleryformatter-greenarrows .gallery-thumbs .back {left:-20px;}
+.galleryformatter-greenarrows .gallery-thumbs .forward {right:-20px;}
+.galleryformatter-greenarrows .gallery-slides .panel-overlay .overlay-inner {padding:5px 10px;}
+.galleryformatter-greenarrows .panel-overlay h3 {color:#fff;}
+/*.galleryformatter-greenarrows .view-full {display:none;}*/
+
+
+/* Service Links */
+.service-links {padding-top: 0.5em;}
+.service-links > * {vertical-align: bottom; margin-left: 5px;}
+
+
+/* Social Media Sidebar Block */
+.block-widgets div.widgets-element-horizontal {float:none; display:inline; white-space: nowrap;}
+
+
+/* Form Tweaks */
+input, select {max-width:100%;} /* Mobile */
+
+/* Kontakt */
+#contact-site-form label {
+  padding-left:0.5em;
+}
+
+#contact-site-form select,
+.node-webform select,
+#contact-site-form textarea,
+.node-webform textarea,
+#contact-site-form input[type="text"],
+.node-webform input[type="text"]
+{
+  border:1px solid #97BFFC;
+  border-radius:14px;
+  font-size:1.0em;
+  color:#666;
+  height:2.2em;
+  padding-left:0.5em;
+  background:#F5F9FF;
+}
+#contact-site-form select,
+.node-webform select {
+  padding-top:0.3em;
+  padding-right: 0.5em;
+}
+
+#contact-site-form .form-textarea-wrapper {
+  max-width:31em;
+}
+#contact-site-form textarea {
+  height:10em;
+}
+
+/* Rückruf Service Form */
+#node-webform-199632 {
+  margin-right:20%;
+}
+
+/* Book Modul Navigation  */
+.book-navigation .page-links,
+.book-navigation .menu  {
+  margin:1em 0;
+  border-color:#F5F5F5 !important;
+}
+
+
+
+/* Syntax Highlighter */
+.syntaxhighlighter {
+  border:1px solid #f5f5f5;
+  font-size:1.1em !important;
+  padding: 1px !important; /* fix to remove vertical scrollbars in Chrome */
+}
+
+.syntaxhighlighter .line {
+  line-height:1.3em !important; 
+}
+
+.syntaxhighlighter .toolbar { /* Fragezeichen ausblenden */
+  display: none;
+}
+
+/* Zeilennummern ausblenden */
+/*
+.syntaxhighlighter .gutter {display:none;}
+.syntaxhighlighter table td.code .line {padding-left: 0 !important;}
+*/
+
+
+/* FIX: Anstand unterhalb des page containes wegfixen */
+#page.clearfix:after {
+  content:" ";
+}
+
