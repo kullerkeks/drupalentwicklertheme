@@ -75,7 +75,6 @@ p {
 
 #section-header {
   background:#444;
-  border-bottom: 5px solid orange;
 }
 
 
@@ -507,15 +506,6 @@ ul.nice-menu a:visited {
   color:orange;
   font-size:1.2em; 
 }
-ul.nice-menu a:hover {
-  text-decoration: none;
-}
-
-
-ul.nice-menu > li > a.active,
-ul.nice-menu > li.menuparent > a.active {
- 
-}
 
 
 ul.nice-menu > li {
@@ -537,6 +527,10 @@ ul.nice-menu-down > li > a.active,
 ul.nice-menu-down > li.active-trail > a  {
   color:#000;
   text-decoration:underline;
+}
+
+ul.nice-menu li ul li {
+  display: none; /* hide dropdowns for mobile */
 }
 
 
