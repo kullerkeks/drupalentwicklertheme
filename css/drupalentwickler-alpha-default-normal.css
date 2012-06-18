@@ -1,0 +1,25 @@
+/* This file will hold styles that are loaded using the same media query as the normal grid. */
+
+#zone-branding-wrapper {
+  font-size:120%;  
+}
+
+
+/* Portfolio View 2 Bilder  nebeneinander */
+#region-content .view-portfolio .views-row {
+    max-width: 43%;
+    margin-right: 2%;
+}
+
+
+.galleryformatter .gallery-slides {
+  min-height:440px;
+}
+
+
+
+/* Sidebar Slideshow */
+#views_slideshow_cycle_main_portfolio-block_1
+{
+  max-width:80%;
+}
